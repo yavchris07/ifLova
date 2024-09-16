@@ -8,7 +8,7 @@ type Pages = {}
 export default function Routing() {
   return (
     <div>
-        Routing
+      Routing
     </div>
   )
 }
