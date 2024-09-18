@@ -1,5 +1,5 @@
 :root{
-    --kprimary:red;
+    --kprimary:rgb(151, 4, 4);
     --kwhite:#fff;
     --kblak:#000;
     --kgrey: grey;
@@ -10,9 +10,40 @@
 //Nav bars
 .nav-bar{
     width: 100%;
-    height: 650px;
+    height: 60px;
     background: var(--kprimary);
-    margin-bottom: 10px;
+    position: absolute;
+
+    .container{
+        width: 25%;
+        margin: auto;
+        background: var();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .logo{
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        
+        .nav-bat-list-item{
+            display: flex;
+            gap: 7px;
+
+            .link{
+                list-style: none;
+                text-decoration: none;
+                font-size: 18px;
+                color: var(--kwhite);
+            }
+           
+        }
+    }
+    // margin-bottom: 10px;
 }
 
 
@@ -40,7 +71,7 @@
             background: var();
             padding: 10px;
             color: var(--kgrey);
-            
+
             p{
                 margin-left: 8px;
             }
@@ -58,7 +89,7 @@
                 }
 
                 button{
-                    border: 1px solid var(--kprimary);
+                    border: 1px solid rgb(151, 4, 4);
                     padding: 8px 25px;
                     margin: 10px;
                     border-radius: 4px;
@@ -78,4 +109,67 @@
         padding-top: 45px;
     }
 
+}
+
+
+//respo
+@media screen and (max-width: 600px) {
+
+
+
+
+    //Footer
+    .footer{
+        height: 500px;
+        background: var(--kblak);
+
+        .form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+
+            .ins{
+                background: var();
+                padding: 10px;
+                color: var(--kgrey);
+                // background: yellow;
+
+                p{
+                    margin-left: 8px;
+                }
+                
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    input{
+                         
+                        width: 260px;
+                        margin: 10px;
+                        border-radius: 4px;
+                        font-size: 17px;
+                        border: none;
+                        padding: 4px;
+                    }
+
+                    button{
+                        border: 1px solid rgb(151, 4, 4);
+                        padding: 10px 25px;
+                        margin: 10px;
+                        border-radius: 4px;
+                        color: var(--kwhite);
+                        background: rgb(151, 4, 4);
+                        cursor: pointer;
+                    }
+                    
+                }
+            }
+        }
+
+        .foot{
+            width: 60%;
+            padding-top: 25px;
+            font-size: 15px;
+        }
+
+    } 
 }

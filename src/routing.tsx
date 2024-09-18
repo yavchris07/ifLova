@@ -6,18 +6,9 @@ import {
 import Home from './pages/home'
 import About from './pages/about'
 import Contact from './pages/contact'
+import NavBar from './components/nav-bar'
+import Footer from './components/footer'
 
-
-
-
-//Type or a list of our pages
-type Pages = {
-  // {
-  //   path:'/',
-  //   name:'home',
-  //   elemenr:'<Home />'
-  // }
-}
 
 //name, path, element
 
@@ -40,11 +31,15 @@ export default function Routing() {
 
   return (
     <Router>
+      <NavBar />
       <Routes>
-        {list.map((p) => { 
-          return <Route path={p.path} element={p.element} /> }
+        
+        {list.map((p,index) => { 
+          return <Route path={p.path} element={p.element} key={index}/> }
         )}
+        
       </Routes>
+      <Footer/>
     </Router>
   )
 }
