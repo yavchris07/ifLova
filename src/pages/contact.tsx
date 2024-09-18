@@ -34,7 +34,7 @@ export default function Contact() {
           <p className='p'>+243 900 000 000</p>
           <p className='p'>+243 800 000 000</p>
           <p className='p'>+243 900 000 000</p>
-          <p className='p'>+243 900 000 000</p>
+          
         </div>
         <div className='picture'></div>
       </div>
@@ -43,7 +43,7 @@ export default function Contact() {
         <div className='picture'></div>
 
         <div className='text'>
-          <p>Notre adresse électronique, pour plus d'infos</p>
+          <p>Notre adresse électronique : </p>
           <p className='p'>infos243@iflova.com</p>
         </div>
         
