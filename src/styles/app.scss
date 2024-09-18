@@ -1,0 +1,81 @@
+:root{
+    --kprimary:red;
+    --kwhite:#fff;
+    --kblak:#000;
+    --kgrey: grey;
+    --kgray: gray;
+    --kbg:#efefef;
+}
+
+//Nav bars
+.nav-bar{
+    width: 100%;
+    height: 650px;
+    background: var(--kprimary);
+    margin-bottom: 10px;
+}
+
+
+//Footer
+.footer{
+
+    width: 100%;
+    height: 300px;
+    background: var(--kblak);
+    margin-top: 50px;
+    padding-top: 50px;
+
+    .form{
+        width: 65%;
+        margin: auto;
+        display: flex;
+         justify-content: space-between;
+
+        .txt{
+            background: var();
+            color: var(--kbg);
+        }
+
+        .ins{
+            background: var();
+            padding: 10px;
+            color: var(--kgrey);
+            
+            p{
+                margin-left: 8px;
+            }
+            
+            form{
+                display: flex;
+                input{
+                    height: 32px;
+                    width: 280px;
+                    margin: 10px;
+                    border-radius: 4px;
+                    font-size: 17px;
+                    border: none;
+                    padding: 4px;
+                }
+
+                button{
+                    border: 1px solid var(--kprimary);
+                    padding: 8px 25px;
+                    margin: 10px;
+                    border-radius: 4px;
+                    color: var(--kwhite);
+                    background: rgb(151, 4, 4);
+                    cursor: pointer;
+                }
+                 
+            }
+        }
+    }
+
+    .foot{
+        width: 15%;
+        margin: auto;
+        color: var(--kwhite);
+        padding-top: 45px;
+    }
+
+}

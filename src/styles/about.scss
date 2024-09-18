@@ -1,0 +1,14 @@
+:root{
+    --kprimary:red;
+    --kwhite:#fff;
+    --kblak:#000;
+    --kgrey: grey;
+    --kgray: gray;
+    --kbg:#efefef;
+}
+
+.about-text{
+    width: 65%;
+    border: 1px solid var(--kprimary);
+    margin: auto;
+}
