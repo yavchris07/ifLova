@@ -6,9 +6,7 @@ import './styles/app.scss';
 function App() {
   return (
     <div className='app'>
-      {/* <NavBar /> */}
       <Routing />
-      {/* <Footer /> */}
     </div>
   );
 }

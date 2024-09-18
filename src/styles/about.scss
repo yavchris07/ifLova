@@ -1,5 +1,5 @@
 :root{
-    --kprimary:red;
+    --kprimary:rgb(151, 4, 4);
     --kwhite:#fff;
     --kblak:#000;
     --kgrey: grey;
@@ -9,6 +9,14 @@
 
 .about-text{
     width: 65%;
-    border: 1px solid var(--kprimary);
+    // border: 1px solid var(--kprimary);
     margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .about-text{
+        width: 90%;
+        // border: 1px solid var(--kprimary);
+        margin: auto;
+    }
 }

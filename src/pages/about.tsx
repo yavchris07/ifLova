@@ -1,13 +1,18 @@
+import LitleBanner from '../components/litle-banner'
 import '../styles/about.scss'
 
 export default function About() {
   return (
     <>
+
+      <LitleBanner 
+       title='Qui sommes nous !'
+        summary="Une chaime d'informations"
+      />
        
       <div className='about-text'>
-        <h3>Qui nous sommes !</h3>
         <span>IFlova TV1</span>
-        <p  className='p'>
+        <p  className='p' style={{color:'gray'}}>
           Bienvenue sur IFlova TV1 : Votre Destination Ultime pour l'Actualité, le Divertissement et la Sécurité
           Plongez dans un monde d'informations fiables et sécuritaires avec IFlova TV1, votre source principale pour les dernières nouvelles de la République Démocratique du Congo et d'autres pays. Nous vous tenons informés des événements importants, des développements sécuritaires et des mises à jour essentielles pour vous aider à rester au fait de l'actualité régionale et internationale.
           Mais ce n'est pas tout - chez IFlova TV1, nous savons que le divertissement est tout aussi crucial. C'est pourquoi nous vous proposons une gamme diversifiée de contenus divertissants, des interviews exclusives aux critiques de films, en passant par les dernières tendances musicale.

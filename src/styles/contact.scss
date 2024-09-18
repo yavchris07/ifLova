@@ -1,0 +1,71 @@
+:root{
+    --kprimary:rgb(151, 4, 4);
+    --kwhite:#fff;
+    --kblak:#000;
+    --kgrey: grey;
+    --kgray: gray;
+    --kbg:#efefef;
+    --kprimary1 : rgb(151,4,4,.6)
+}
+
+.contact{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    // background: red;
+    p{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    span{
+        color: var(--kgray);
+    }
+
+
+    .right-card{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        // background: green;
+        margin: 20px;
+        justify-content: space-between;
+    
+        .text{
+            p{color: var(--kgray);}
+            .p{color: var(--kblak);}
+        }
+    
+        .picture{
+            background: var(--kprimary1);
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+        }
+    
+    }
+    
+    .left-card{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        margin: 10px;
+        // background: pink;
+        justify-content: space-between;
+        margin-top: 20px;
+    
+        .text{
+            p{color: var(--kgray);}
+            .p{color: var(--kblak);}
+        }
+    
+        .picture{
+            background: var(--kprimary1);
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+        }
+    }
+}
+

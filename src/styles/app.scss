@@ -5,14 +5,16 @@
     --kgrey: grey;
     --kgray: gray;
     --kbg:#efefef;
+    --kprimary1 : rgb(151,4,4,.8)
 }
 
 //Nav bars
 .nav-bar{
     width: 100%;
     height: 60px;
-    background: var(--kprimary);
-    position: absolute;
+    background: transparent;
+    position: fixed;
+    border-bottom: 1px solid var(--kgrey);
 
     .container{
         width: 25%;
@@ -111,6 +113,35 @@
 
 }
 
+//Banner
+.banner{
+    width: 100%;
+    height: 650px;
+    background: var(--kprimary1);
+}
+
+
+//lilte-banner
+.lilte-banner{
+    width: 100%;
+    height: 400px;
+    background: var(--kprimary);
+    margin-bottom: 20px;
+    text-align: center;
+
+    h4{
+        margin-top: 0;
+        padding-top: 140px;
+        font-size: 50px;
+        margin-bottom: 2px;
+        color: var(--kblak);
+    }
+
+    p{
+        color: var(--kwhite);
+        font-size: 16px;
+    }
+}
 
 //respo
 @media screen and (max-width: 600px) {
@@ -172,4 +203,21 @@
         }
 
     } 
+
+    //lilte-banner
+    .lilte-banner{
+        margin-bottom: 25px;
+
+        h4{
+            margin-top: 0;
+            padding-top: 220px;
+            font-size: 27px;
+             
+        }
+
+        p{
+            color: var(--kblak);
+            font-size: 16px;
+        }
+    }
 }
