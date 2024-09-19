@@ -22,7 +22,7 @@ export default function Footer() {
       
 
       <div className='foot'>
-        <p>Tout droit réservé | IFlova | 2024</p>
+        <p>Tout droit réservé | IFlova | 2024 </p>
       </div>
     </div>
   )
