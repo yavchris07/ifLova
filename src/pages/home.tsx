@@ -1,8 +1,40 @@
 import React from 'react'
 import Banner from '../components/banner';
 import '../styles/home.scss';
+import CardList from '../components/card-list';
 
 function Home() {
+  const art = [
+    {
+      cover: "",
+      title : "string", //55
+      date : "string",
+      summary : "string", //125
+      author : "string",
+      author_cover : "string",
+      typ : "string"
+    },
+    {
+      cover: "",
+      title : "string", //55
+      date : "string",
+      summary : "string", //125
+      author : "string",
+      author_cover : "string",
+      typ : "string"
+    },
+    {
+      cover: "",
+      title : "string", //55
+      date : "string",
+      summary : "string", //125
+      author : "string",
+      author_cover : "string",
+      typ : "string"
+    }
+
+  ]
+  
   return (
     <>
       <Banner />
@@ -14,6 +46,8 @@ function Home() {
         </p>
 
         <div className='list-card'></div>
+        <div className='list-card'></div>
+          <CardList article={art} />
       </div>
      
     </>
