@@ -7,6 +7,15 @@ export interface Article {
     typ : string
 }
 
-export interface User {}
+export interface User {
+    id:number,
+    names : string,
+    email : string,
+    password : string,
+    rol : string
+}
 
-// export interface 
+export interface News {
+    id : number,
+    email : string
+}

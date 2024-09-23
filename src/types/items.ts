@@ -2,7 +2,7 @@ const art = [
     {
       cover: "/imgs/un.jpg",
       title : "La geurre à l'est, pourquoi personne n'en parle ?", //55
-      date : "Le 12 Sept 2024",
+      date : "12 Sept 2024",
       summary : "Today, I am talking to Kevin Hart. Kevin is an actor, comedian, author, investor, and CEO. Over the years", //125
       author : "Vicky Bulaim",
       author_cover : "string",
@@ -10,8 +10,8 @@ const art = [
     },
     {
       cover: "/imgs/c2.jpg",
-      title : "string", //55
-      date : "Le 12 Sept 2024",
+      title : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ", //55
+      date : "12 Sept 2024",
       summary : "Today, I am talking to Kevin Hart. Kevin is an actor, comedian, author, investor, and CEO. Over the years", //125
       author : "Florence Mubalam",
       author_cover : "string",
@@ -19,8 +19,8 @@ const art = [
     },
     {
       cover: "/imgs/cast.jpg",
-      title : "string", //55
-      date : "Le 12 Sept 2024",
+      title : "eos dolorem accusamus ut alias commodi! Rem commodi autem praesentium odio dignissimos! ", //55
+      date : "12 Sept 2024",
       summary : "Today, I am talking to Kevin Hart. Kevin is an actor, comedian, author, investor, and CEO. Over the years", //125
       author : "Gaeta Mamadou",
       author_cover : "string",
@@ -28,8 +28,8 @@ const art = [
     },
     {
         cover: "/imgs/child.jpg",
-        title : "string", //55
-        date : "Le 12 Sept 2024",
+        title : "Cupiditate, vero inventore quasi repellat ea cumque? Id, culpa.", //55
+        date : "12 Sept 2024",
         summary : "Today, I am talking to Kevin Hart. Kevin is an actor, comedian, author, investor, and CEO. Over the years", //125
         author : "Florence Mubalam",
         author_cover : "string",
@@ -37,8 +37,8 @@ const art = [
     },
     {
         cover: "/imgs/blog1.png",
-        title : "string", //55
-        date : "Le 12 Sept 2024",
+        title : "Cupiditate, vero inventore quasi repellat ea cumque? Id, culpa.", //55
+        date : "12 Sept 2024",
         summary : "Today, I am talking to Kevin Hart. Kevin is an actor, comedian, author, investor, and CEO. Over the years", //125
         author : "Gaeta Mamadou",
         author_cover : "string",
@@ -46,8 +46,8 @@ const art = [
     },
     {
         cover: "/imgs/c2.jpg",
-        title : "string", //55
-        date : "Le 12 Sept 2024",
+        title : "eos dolorem accusamus ut alias commodi! Rem commodi autem praesentium odio dignissimos! ", //55
+        date : "12 Sept 2024",
         summary : "Today, I am talking to Kevin Hart. Kevin is an actor, comedian, author, investor, and CEO. Over the years", //125
         author : "Florence Mubalam",
         author_cover : "string",
@@ -55,8 +55,8 @@ const art = [
     },
     {
         cover: "/imgs/ingen.png",
-        title : "string", //55
-        date : "Le 12 Sept 2024",
+        title : "Cupiditate, vero inventore quasi repellat ea cumque? Id, culpa.", //55
+        date : "12 Sept 2024",
         summary : "Today, I am talking to Kevin Hart. Kevin is an actor, comedian, author, investor, and CEO. Over the years", //125
         author : "Florence Mubalam",
         author_cover : "string",
@@ -64,8 +64,8 @@ const art = [
     },
     {
         cover: "/imgs/f.webp",
-        title : "string", //55
-        date : "Le 12 Sept 2024",
+        title : "eos dolorem accusamus ut alias commodi! Rem commodi autem praesentium odio dignissimos! ", //55
+        date : "12 Sept 2024",
         summary : "Today, I am talking to Kevin Hart. Kevin is an actor, comedian, author, investor, and CEO. Over the years", //125
         author : "Florence Mubalam",
         author_cover : "string",

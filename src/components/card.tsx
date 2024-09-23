@@ -19,7 +19,7 @@ const Card = ({article}:cardProps) => {
                 <img src={author} />
                 </div>
                 <div className="nom">{article.author},</div>
-                <div className="date_of_post">{article.date}</div>
+                <div className="date_of_post">Le {article.date}</div>
             </div>
             <div className="legende">{article.summary.substring(0,110)} </div>
         </div>

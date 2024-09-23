@@ -11,7 +11,7 @@ const CardList = ({articles}:cardListProps) => {
   return (
     <div className='list-card'>
       {
-        articles.map((art)=>{return <Card article={art}/>})
+        articles.map((art,idx)=>{return <Card article={art} key={idx}/>})
       }
     </div>
   )
