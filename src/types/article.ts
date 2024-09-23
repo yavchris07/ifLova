@@ -4,7 +4,6 @@ export interface Article {
     date : string,
     summary : string, //125
     author : string,
-    author_cover : string,
     typ : string
 }
 

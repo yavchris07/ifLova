@@ -3,15 +3,15 @@ import Card from './card'
 import { Article } from '../types/article'
 
 type cardListProps = {
-  article : Article[];
+  articles : Article[];
 }
 
-const CardList = ({article}:cardListProps) => {
+const CardList = ({articles}:cardListProps) => {
 
   return (
     <div className='list-card'>
       {
-        article.map((art)=>{return <Card articles={art}/>})
+        articles.map((art)=>{return <Card article={art}/>})
       }
     </div>
   )

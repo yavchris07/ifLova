@@ -8,21 +8,33 @@
 
     .list-card{
         width: 80%;
-        margin: 19px auto;
-        height: 420px;
-        background: purple;
-        display: flex;
+        margin: 10px auto;
+        height: auto;
+        // background: purple;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:12px;
+
+        @media screen and (max-width: 600px) {
+            width: 93%;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap:12px;
+        }
+
 
         //articles 
         .article {
-            width: 33%;
+            width: 450px;
             padding-left: 1.6%;
             height: auto;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             display: flex;
             flex-direction: column;
-        
-            margin-bottom: 60px;
+            cursor: pointer;
+            // border: 1px solid black;
+            margin-bottom: 30px;
+
             @media (min-width: 700px) {
               float: left;
             }
@@ -50,13 +62,17 @@
               span {
                 padding: 10px 10px;
                 font-size: 17px;
-        
                 position: absolute;
                 bottom: 0px;
                 left: 0;
                 z-index: 300000;
                 color: #f8f8f8;
                 background-color: rgb(255, 47, 57);
+                @media screen and (max-width: 600px) {
+                    padding: 10px 10px;
+                    font-size: 13px;
+                }
+        
               }
         
               img {
@@ -78,6 +94,7 @@
               h3 {
                 margin-top: -0px;
                 margin-bottom: 5px;
+                margin: 1px;
                 font-weight: 1000;
                 text-transform: uppercase;
                 @media (min-width: 700px) and (max-width: 1000px) {
@@ -308,12 +325,6 @@
             font-size: 14px;
         }
     
-        .list-card{
-            width: 97%;
-            // margin: 19px auto;
-            height: 420px;
-            // background: purple;
-        }
     }
 
 }
