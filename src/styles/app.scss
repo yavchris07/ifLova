@@ -12,7 +12,7 @@
 .nav-bar{
     width: 100%;
     height: 60px;
-    background: transparent;
+    background: var(--kblak);
     position: absolute;
     border-bottom: 1px solid var(--kgrey);
 
@@ -117,7 +117,31 @@
 .banner{
     width: 100%;
     height: 650px;
-    background: var(--kprimary1);
+    background: url('../assets/banner.jpg');
+    background-size: cover;
+    // position: relative;
+    .cover{
+        width: 100%;
+        height: 100%;
+        // position: relative;
+        background: rgb(0, 0, 0,.8);
+        text-align: center;
+        text-transform: uppercase;
+        h3{
+            padding-top: 300px;
+            margin: 0px;
+            color: var(--kwhite);
+            font-size: 56px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            
+        }
+        p{
+            margin: 0px;
+            color: var(--kwhite);
+            font-size: 20px;
+        }
+    }
 }
 
 
