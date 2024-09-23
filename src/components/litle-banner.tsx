@@ -10,8 +10,10 @@ type litleProps = {
 export default function LitleBanner({title,summary}:litleProps) {
   return (
     <div className='lilte-banner'>
+      <div className='cover'>
         <h4>{title}</h4>
         <p>{summary}</p>
+      </div>
     </div>
   )
 }

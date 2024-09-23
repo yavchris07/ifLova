@@ -13,3 +13,22 @@
         background: purple;
     }
 }
+
+//respo
+@media screen and (max-width: 600px) {
+    .home{
+        // background: red;
+        p{
+            width: 90%;
+            font-size: 14px;
+        }
+    
+        .list-card{
+            width: 97%;
+            // margin: 19px auto;
+            height: 420px;
+            // background: purple;
+        }
+    }
+
+}

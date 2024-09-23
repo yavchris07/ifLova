@@ -14,9 +14,9 @@ export default function NavBar() {
     return (
         <div className='nav-bar'>
             <div className='container'>
-                <div className='logo'>
+                {/* <div className='logo'>
                     <img src={log} alt="" />
-                </div>
+                </div> */}
                 <ul className='nav-bat-list-item'>
                     {
                         lists.map((l, i) =>
