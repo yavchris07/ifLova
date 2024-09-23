@@ -26,6 +26,14 @@ export default function Routing() {
     {
       path: '/contact',
       element: <Contact />
+    },
+    {
+      path: '/articles',
+      element: <Contact />
+    },
+    {
+      path: '/article',
+      element: <Contact />
     }
   ]
 
@@ -33,11 +41,9 @@ export default function Routing() {
     <Router>
       <NavBar />
       <Routes>
-        
-        {list.map((p,index) => { 
-          return <Route path={p.path} element={p.element} key={index}/> }
+        {list.map((p) => { 
+          return <Route path={p.path} element={p.element} key={p.path}/> }
         )}
-        
       </Routes>
       <Footer/>
     </Router>
