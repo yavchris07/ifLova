@@ -15,6 +15,7 @@ function Home() {
           Mais ce n'est pas tout - chez IFlova TV1, nous savons que le divertissement est tout aussi crucial. <span style={{color:'#970404'}}>C'est pourquoi nous vous proposons une gamme diversifiée de contenus divertissants, 
           des interviews exclusives aux critiques de films, en passant par les dernières tendances musicale</span>.
         </p>
+        
           <CardList articles={art} />
       </div>
      

@@ -13,7 +13,7 @@ const Card = ({article}:cardProps) => {
             <img src={article.cover} />
         </div>
         <div className="descript">
-            <h3>{article.title.substring(0,55)}</h3>
+            <h3>{article.title.substring(0,50)}...</h3>
             <div className="auteur">
                 <div className="avatar">
                 <img src={author} />
@@ -21,7 +21,7 @@ const Card = ({article}:cardProps) => {
                 <div className="nom">{article.author},</div>
                 <div className="date_of_post">Le {article.date}</div>
             </div>
-            <div className="legende">{article.summary.substring(0,110)} </div>
+            <div className="legende">{article.summary.substring(0,100)}...</div>
         </div>
     </div>
   )

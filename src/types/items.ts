@@ -1,5 +1,5 @@
 const art = [
-    {
+  {
       cover: "/imgs/un.jpg",
       title : "La geurre à l'est, pourquoi personne n'en parle ?", //55
       date : "12 Sept 2024",
@@ -7,7 +7,7 @@ const art = [
       author : "Vicky Bulaim",
       author_cover : "string",
       typ : "Securite"
-    },
+  },
     {
       cover: "/imgs/c2.jpg",
       title : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ", //55
