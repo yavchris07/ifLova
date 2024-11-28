@@ -33,7 +33,7 @@ export default function Footer() {
 
     } catch (error) {
       setError(`Erreur : ${error}`);
-      // console.log(er)
+      console.log(er)
     } finally {
       setIsLoading(false);
     }

@@ -11,7 +11,7 @@ const Login: React.FC = () => {
   const [isError, setError] = useState<string>('')
   const navigator = useNavigate();
 
-  const isDisabled = email === '' || mot === '' || mot.length <= 5
+  const isDisabled = email === '' || mot === '' || mot.length <= 2
 
   
   const handleSubmit = async (event: React.FormEvent) => {
