@@ -27,7 +27,7 @@ const Login: React.FC = () => {
       // console.log(await response.text())
   
       const data = await response.json();
-      console.log(data)
+      // console.log(data)
      
       if (data[0] === false) {
         setError('Erreur mauvais identifiants, email ou mot de passe !')
@@ -79,7 +79,7 @@ const Login: React.FC = () => {
           <div style={{fontSize:'12px',color:'#970404'}}>{isError}</div>
           
           <button type="submit" className={isDisabled ? 'not-allowed' : 'allowed'}>
-            Se connecter
+            {isLoading ? 'Connexion' : 'Se connecter'}
           </button>
         </form>
       </div>

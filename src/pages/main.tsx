@@ -34,7 +34,7 @@ export default function Main() {
         formData.append('dats', dats);
         formData.append('type', type);
         formData.append('author', author);
-        formData.append('cover', cover); // Ajoute le fichier ici
+        // formData.append('cover', cover); // Ajoute le fichier ici
    
     try {
       setLoading(true)
@@ -121,7 +121,7 @@ export default function Main() {
                 type="file" 
                 accept="image/*"
                 placeholder='La photo ...' 
-                onChange={(e)=> setCover(e.target.files[0])}
+                // onChange={(e)=> setCover(e.target.files[0])}
               />
             </div>
             <div className='control'>

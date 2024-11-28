@@ -6,9 +6,9 @@ const Test = () => {
     const [dats, setDats] = useState('');
     const [type, setType] = useState('');
     const [author, setAuthor] = useState('');
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState<File>();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('titre', titre);
@@ -16,7 +16,7 @@ const Test = () => {
         formData.append('dats', dats);
         formData.append('type', type);
         formData.append('author', author);
-        formData.append('image', image); // Ajoute le fichier ici
+        // formData.append('image', image); // Ajoute le fichier ici
 
         try {
             const response = await fetch(`${''}`, {
@@ -64,7 +64,7 @@ const Test = () => {
     <input
         type="file"
         accept="image/*"
-        onChange={(e) => setImage(e.target.files[0])} // Assure-toi de ne prendre que le premier fichier
+        // onChange={(e) => setImage(e.target.files[0])} // Assure-toi de ne prendre que le premier fichier
     />
     <button type="submit">Envoyer</button>
 </form>

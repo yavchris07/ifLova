@@ -2,36 +2,38 @@ import React, { useState } from 'react'
 import { baseUrl } from '../types/base-url';
 
 export default function Footer() {
-  const [mail,setMail] = useState<string>('')
-  const [isLoading,setIsLoading] = useState<boolean>(false)
-  const [error,setError] = useState<string>('')
+  const [email, setMail] = useState<string>('')
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [er, setError] = useState<string>('')
 
-  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) =>{
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-   
+
     try {
       setIsLoading(true)
       const response = await fetch(`${baseUrl}/letters`, {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({mail}),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
       });
-      // console.log('Email',mail)
+      // console.log('Email', email)
       // console.log(await response.text())
-  
+
       const data = await response.json();
-     
-      if (data.status === 'Letter created') {
+
+      if (data) {
         // navigator('/');
-        alert('Adresse mail reussie avec succes !')
+        // alert('Adresse mail reussie avec succes !')
+        setMail('')
       }
 
       if (!response.ok) {
         throw new Error(`Erreur lors de tentative de creation de news letters !`);
       }
-  
+
     } catch (error) {
       setError(`Erreur : ${error}`);
+      // console.log(er)
     } finally {
       setIsLoading(false);
     }
@@ -41,28 +43,27 @@ export default function Footer() {
     <div className='footer'>
       <div className='form'>
         <div className='txt'>
-            <p>Vous etes passioné par la lecture ? </p>
-            <p>Nous avons plusieurs articles , en sécurités, divertissement, sport et beaucoup d'autres</p>
-            <p>Priere de nous laisser votre adresse mail !</p>
+          <p>Vous etes passioné par la lecture ? </p>
+          <p>Nous avons plusieurs articles , en sécurités, divertissement, sport et beaucoup d'autres</p>
+          <p>Priere de nous laisser votre adresse mail !</p>
         </div>
-        
+
         <div className='ins'>
-            <p>Inscription aux news letters</p>
-            <form  onSubmit={handleSubmit}>
-                <input 
-                  type="text" 
-                  name="mail" id="" 
-                  placeholder='Entrez votre email ici !'
-                  value={mail}
-                  onChange={(e)=> setMail(e.target.value)}
-                  required
-                />
-                <button type='submit'>Valider</button>
-            </form>
+          <p>Inscription aux news letters</p>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder='Entrez votre email ici !'
+              value={email}
+              onChange={(e) => setMail(e.target.value)}
+              required
+            />
+            <button type='submit'>{isLoading ? 'En cours' : 'Valider'}</button>
+          </form>
         </div>
-        
+
       </div>
-      
+
 
       <div className='foot'>
         <p>Tout droit réservé | IFlova | 2024 </p>
@@ -70,5 +71,5 @@ export default function Footer() {
     </div>
   )
 }
- 
+
 
