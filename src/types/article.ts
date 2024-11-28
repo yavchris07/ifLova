@@ -1,12 +1,16 @@
+//Article
 export interface Article {
     cover: string,
-    title : string, //55
-    date : string,
-    summary : string, //125
+    titre : string, //55
+    dats : string,
+    resumes : string, //125
     author : string,
-    typ : string
+    type : string,
+    id:number
 }
 
+
+//User
 export interface User {
     id:number,
     names : string,
@@ -15,6 +19,7 @@ export interface User {
     rol : string
 }
 
+//News Letters
 export interface News {
     id : number,
     email : string

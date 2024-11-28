@@ -1,11 +1,4 @@
-:root{
-    --kprimary:rgb(151, 4, 4);
-    --kwhite:#fff;
-    --kblak:#000;
-    --kgrey: grey;
-    --kgray: gray;
-    --kbg:#efefef;
-}
+@import 'root.scss';
 
 .about-text{
     width: 65%;

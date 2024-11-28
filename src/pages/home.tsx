@@ -2,12 +2,17 @@ import Banner from '../components/banner';
 import '../styles/home.scss';
 import CardList from '../components/card-list';
 import art from '../types/items';
+import NavBar from '../components/nav-bar';
+import Footer from '../components/footer';
+import useFetchData from '../hooks/use-fetch-articles';
 
 function Home() {
 
+const {arti,isLoading,error} = useFetchData()
 
   return (
     <>
+    <NavBar />
       <Banner />
       <div className='home'>
         <p>
@@ -16,9 +21,9 @@ function Home() {
           des interviews exclusives aux critiques de films, en passant par les dernières tendances musicale</span>.
         </p>
         
-          <CardList articles={art} />
+          <CardList articles={arti} />
       </div>
-     
+    <Footer />
     </>
   )
 }

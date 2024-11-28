@@ -1,12 +1,4 @@
-:root{
-    --kprimary:rgb(151, 4, 4);
-    --kwhite:#fff;
-    --kblak:#000;
-    --kgrey: grey;
-    --kgray: gray;
-    --kbg:#efefef;
-    --kprimary1 : rgb(151,4,4,.6)
-}
+@import 'root.scss';
 
 .contact{
     width: 40%;

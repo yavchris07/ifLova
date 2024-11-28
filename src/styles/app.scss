@@ -1,12 +1,4 @@
-:root{
-    --kprimary:rgb(151, 4, 4);
-    --kwhite:#fff;
-    --kblak:#000;
-    --kgrey: grey;
-    --kgray: gray;
-    --kbg:#efefef;
-    --kprimary1 : rgb(151,4,4,.8)
-}
+@import 'root.scss';
 
 //Nav bars
 .nav-bar{
@@ -265,12 +257,12 @@
                         border-radius: 4px;
                         font-size: 17px;
                         border: none;
-                        padding: 4px;
+                        padding: 5px;
                     }
 
                     button{
                         border: 1px solid rgb(151, 4, 4);
-                        padding: 10px 25px;
+                        padding: 15px 25px;
                         margin: 10px;
                         border-radius: 4px;
                         color: var(--kwhite);
