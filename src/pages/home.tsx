@@ -8,7 +8,7 @@ import useFetchData from '../hooks/use-fetch-articles';
 
 function Home() {
 
-const {arti,isLoading,error} = useFetchData()
+const {arti} = useFetchData()
 
   return (
     <>

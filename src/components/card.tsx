@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { Article } from '../types/article';
 import author from '../assets/main-cover.jpg';
+// import art from '../types/items';
 
 type cardProps = {
     article : Article
@@ -11,7 +12,9 @@ const Card = ({article}:cardProps) => {
     <div className="article" onClick={()=>{}}>
         <div className="cover">
             <span>{article.type}</span>
-            <img src={article.cover} />
+            {article.cover && <img src={article.cover} alt={article.titre}/>}
+            
+            
         </div>
         <div className="descript">
             <h3>{article.titre.substring(0,50)}...</h3>
