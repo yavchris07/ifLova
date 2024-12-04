@@ -8,7 +8,7 @@ import useFetchData from '../hooks/use-fetch-articles';
 
 function Home() {
 
-const {arti} = useFetchData()
+// const {arti} = useFetchData()
 
   return (
     <>
@@ -21,7 +21,7 @@ const {arti} = useFetchData()
           des interviews exclusives aux critiques de films, en passant par les dernières tendances musicale</span>.
         </p>
         
-          <CardList articles={arti} />
+          <CardList articles={art} />
       </div>
     <Footer />
     </>

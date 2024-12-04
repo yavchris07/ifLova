@@ -177,7 +177,7 @@ export default function Main() {
           {isLoading && <p>Chargement des articles...</p>}
           {arti.map((a) => (
             <p style={{ fontSize: '10px' }} key={a.id}>
-              {a.titre}
+              {a.title}
             </p>
           ))}
         </div>
