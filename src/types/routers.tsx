@@ -5,6 +5,8 @@ import Login from '../pages/login'
 import Main from '../pages/main'
 import AdminArticle from '../pages/admin-article'
 import AdminUser from '../pages/admin-user'
+import Articles from '../pages/articles'
+import Article from '../pages/article'
 
 export const list = [
     {
@@ -21,11 +23,11 @@ export const list = [
     },
     {
         path: '/articles',
-        element: <Contact />
+        element: <Articles />
     },
     {
         path: '/article/:id',
-        element: <Contact />
+        element: <Article />
     },
     {
         path: '/admin/login',
