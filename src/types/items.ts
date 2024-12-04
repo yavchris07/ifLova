@@ -1,4 +1,6 @@
-const art = [
+import { Article } from "./article"
+
+const art : Article[] = [
     {
         cover: "/imgs/un.jpg",
         title: "La geurre à l'est, pourquoi personne n'en parle ?", //55

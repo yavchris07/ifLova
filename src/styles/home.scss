@@ -359,6 +359,25 @@
         }
       }
     }
+   
+  }
+  .more{
+    // idth: 20%;
+    // margin: auto;
+    text-align: center;
+    // background: red;
+
+    p{
+      border: 1px solid var(--kprimary);
+      width: 150px;
+      border-radius: 25px;
+      padding: 9px 15px;
+      cursor: pointer;
+      &:hover{
+        background: var(--kprimary);
+        color: white;
+      }
+    }
   }
 }
 

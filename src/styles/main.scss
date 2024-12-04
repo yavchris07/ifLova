@@ -88,10 +88,21 @@
             border: none;
             border-radius: 4px;
             font-size: 17px;
+            cursor: pointer;
         }
     }
 
     .list-articles{
         width: 60%;
+        h3{font-size: 15px;}
+        p{font-size: 10px; color: var(--kprimary);}
+        .artic{
+            border: 1px solid grey;
+            margin: 5px;
+            border-radius: 5px;
+            padding: 2px;
+            p{font-size: 15px; margin: 2px; color: grey;}
+            span{font-size: 12px;}
+        }
     }
 }

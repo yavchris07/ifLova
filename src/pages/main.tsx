@@ -177,14 +177,15 @@ export default function Main() {
           <h3>Mes articles</h3>
           <p>Nombre d'articles : {art.length}</p>
           {isLoading && <p>Chargement des articles...</p>}
-          {art.map((a) => (
-            <div>
+          {art && art.map((a) => (
+            <div className='artic'>
               <p key={a.id}>
                 {a.title}
               </p>
-              <span>{a.author}</span>
+              <span>Auteur : {a.author}</span>
             </div>
           ))}
+          {/* {art.length} */}
         </div>
       </div>
     </div>

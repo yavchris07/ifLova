@@ -5,10 +5,12 @@ import art from '../types/items';
 import NavBar from '../components/nav-bar';
 import Footer from '../components/footer';
 import useFetchData from '../hooks/use-fetch-articles';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
 
 // const {arti} = useFetchData()
+const navigator = useNavigate()
 
   return (
     <>
@@ -21,7 +23,11 @@ function Home() {
           des interviews exclusives aux critiques de films, en passant par les dernières tendances musicale</span>.
         </p>
         
-          <CardList articles={art} />
+          {art &&  <CardList articles={art} />}
+          {/* {loading} */}
+          {art.length === 0 && <div>Aucun article n'est present !</div>}
+         
+          <div className='more'><p onClick={()=> {navigator('/articles')}}>Voir plus</p></div>
       </div>
     <Footer />
     </>
