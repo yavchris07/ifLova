@@ -187,6 +187,11 @@ export default function Main() {
           ))}
           {/* {art.length} */}
         </div>
+        <div className="list-articles">
+        <h3>Mes articles</h3>
+          {}
+          <p>dfjkdsfjdskfjkdsjfkjds</p> 
+        </div>
       </div>
     </div>
   );

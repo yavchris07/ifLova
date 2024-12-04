@@ -11,10 +11,7 @@ const CardList = ({articles}:cardListProps) => {
   return (
     <div className='list-card'>
       {
-        articles.map((art,idx)=>{
-          // console.log(art.cover) 
-          return <Card article={art} key={idx}/>
-        })
+        articles.map((art,idx)=>{return <Card article={art} key={idx}/>})
       }
     </div>
   )
