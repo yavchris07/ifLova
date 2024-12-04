@@ -12,7 +12,7 @@ const CardList = ({articles}:cardListProps) => {
     <div className='list-card'>
       {
         articles.map((art,idx)=>{
-          console.log(art.cover) 
+          // console.log(art.cover) 
           return <Card article={art} key={idx}/>
         })
       }

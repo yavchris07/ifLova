@@ -1,10 +1,12 @@
 import React from 'react'
 import LitleBanner from '../components/litle-banner';
 import '../styles/contact.scss'
+import NavBar from '../components/nav-bar';
 
 export default function Contact() {
   return (
     <>
+     <NavBar />
       <LitleBanner 
       title='Comment nous contacter !'
       summary="Votre Destination Ultime pour l'Actualité"

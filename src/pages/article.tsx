@@ -28,7 +28,7 @@ export default function Article() {
         {article.cover && <img src={article.cover} alt={article.title} />} */}
        
         <div>
-        <h3>{article.title}</h3>
+        <h3>{article.title.toUpperCase()}</h3>
         </div>
         <div className='picture'>
           <span>{article.typ}</span>
