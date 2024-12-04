@@ -4,6 +4,7 @@ import '../styles/main.scss';
 import AdminNav from '../components/admin-nav';
 import useFetchData from '../hooks/use-fetch-articles';
 import { baseUrl } from '../types/base-url';
+import art from '../types/items';
 
 export default function Main() {
   const [titre, setTitre] = useState<string>('');
@@ -174,12 +175,15 @@ export default function Main() {
 
         <div className="list-articles">
           <h3>Mes articles</h3>
-          <p>Nombre d'articles : {arti.length}</p>
+          <p>Nombre d'articles : {art.length}</p>
           {isLoading && <p>Chargement des articles...</p>}
-          {arti.map((a) => (
-            <p style={{ fontSize: '10px' }} key={a.id}>
-              {a.title}
-            </p>
+          {art.map((a) => (
+            <div>
+              <p key={a.id}>
+                {a.title}
+              </p>
+              <span>{a.author}</span>
+            </div>
           ))}
         </div>
       </div>

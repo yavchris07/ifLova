@@ -41,8 +41,8 @@ export const list = [
         path: '/admin/main/articles',
         element: <AdminArticle />
     },
-    {
-        path: '/admin/main/user',
-        element: <AdminUser />
-    }
+    // {
+    //     path: '/admin/main/user',
+    //     element: <AdminUser />
+    // }
 ]

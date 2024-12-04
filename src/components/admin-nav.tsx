@@ -17,11 +17,14 @@ const AdminNav = () => {
         borderBottom: 'none'
     };
 
+    const user = localStorage.getItem('email')
+
   return (
     <>
       <div className='head'>
         <h3>IF LOVA OFFICIEL</h3>
-        <h3>Admin</h3>
+        <div className='user'><h3>Admin : </h3><span>{user}</span></div>
+        
       </div>
 
       {/* <div className='tabs'> 
