@@ -1,11 +1,13 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import art from '../types/items';
+import NavBar from '../components/nav-bar';
+import Footer from '../components/footer';
 
 export default function Article() {
   const { id } = useParams<{ id: string }>();
   // const { encryptedId } = useParams<{ encryptedId: string }>();
-  // const {skool} = useFetchSkools()
+  // const {arti} = useFetchData()
   let article;
 
   if (id) {
@@ -14,11 +16,18 @@ export default function Article() {
   }
 
   if (!article) {
-    return <div className='not-school-found'>Chargement en cours, veuillez patienter !</div>
+    return <div className='not-found'>Chargement en cours, veuillez patienter !</div>
   }
   return (
-    <div className='article'>
-      <p>{article.summary}</p>
-    </div>
+    <>
+      <NavBar />
+      <div className='article'>
+        {/* <p>{article.summary}</p>
+        <p>{article.title}</p>
+        {article.cover && <img src={article.cover} alt={article.title} />} */}
+      </div>
+      <Footer />
+    </>
+
   )
 }

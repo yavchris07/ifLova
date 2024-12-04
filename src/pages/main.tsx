@@ -127,6 +127,7 @@ export default function Main() {
                 value={resumes}
                 placeholder="Le résumé ..."
                 onChange={(e) => setResumes(e.target.value)}
+                className='summary'
               />
             </div>
 
