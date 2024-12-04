@@ -4,7 +4,6 @@ import Contact from '../pages/contact'
 import Login from '../pages/login'
 import Main from '../pages/main'
 import AdminArticle from '../pages/admin-article'
-import AdminUser from '../pages/admin-user'
 import Articles from '../pages/articles'
 import Article from '../pages/article'
 
