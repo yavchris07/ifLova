@@ -1,9 +1,9 @@
 import React from 'react'
 import NavBar from '../components/nav-bar'
-import CardList from '../components/card-list'
 import Footer from '../components/footer'
 import art from '../types/items'
 import LitleBanner from '../components/litle-banner'
+import AllCard from '../components/all-card'
 
 export default function Articles() {
   return (
@@ -18,8 +18,8 @@ export default function Articles() {
           Nous vous tenons informés des événements importants, des développements sécuritaires et des mises à jour essentielles pour vous aider à rester au fait de l'actualité régionale et internationale.
           Mais ce n'est pas tout - chez IFlova TV1, nous savons que le divertissement est tout aussi crucial.
         </p>
-        
-          <CardList articles={art} />
+      
+          <AllCard articles={art} />
       </div>
     <Footer />
     </>
