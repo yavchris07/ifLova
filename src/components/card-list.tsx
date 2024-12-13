@@ -11,7 +11,7 @@ const CardList = ({articles}:cardListProps) => {
   return (
     <div className='list-card'>
       {
-        articles.slice(0,4).map((art,idx)=>{return <Card article={art} key={idx}/>})
+        articles.slice(0,11).map((art,idx)=>{return <Card article={art} key={idx}/>})
       }
     </div>
   )
