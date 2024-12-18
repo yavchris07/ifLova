@@ -18,7 +18,7 @@ export default function Main() {
   const [loading, setLoading] = useState<boolean>(false);
   const [isError, setError] = useState<string>('');
 
-  const { arti, isLoading } = useFetchData();
+  const { art, isLoading } = useFetchData();
 
   // Contrôle si l'utilisateur est connecté
   useEffect(() => {

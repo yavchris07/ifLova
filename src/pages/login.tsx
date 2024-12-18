@@ -5,23 +5,23 @@ import { baseUrl } from '../types/base-url'
 
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState<string>('')
-  const [mot, setMot] = useState<string>('')
+  const [username, setUsername] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
   const [isLoading,setIsLoading] = useState<Boolean>(false)
   const [isError, setError] = useState<string>('')
   const navigator = useNavigate();
 
-  const isDisabled = email === '' || mot === '' || mot.length <= 2
+  const isDisabled = username === '' || password === '' || password.length <= 5
 
   
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
       setIsLoading(true)
-      const response = await fetch(`${baseUrl}/login`, {
+      const response = await fetch(`${baseUrl}/Login/`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({email,mot}),
+        body: JSON.stringify({username,password}),
       });
       // console.log('Email',mail)
       // console.log(await response.text())
@@ -32,8 +32,8 @@ const Login: React.FC = () => {
       if (data[0] === false) {
         setError('Erreur mauvais identifiants, email ou mot de passe !')
       }else{
-        const mail = data[0].email
-        localStorage.setItem('email',mail)
+        const mail = data[1]
+        localStorage.setItem('username',mail)
         navigator('/admin/main');
         // alert('Login succes !')
       }
@@ -62,8 +62,8 @@ const Login: React.FC = () => {
             <input
               type="mail"
               placeholder="Username"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               required
             />
           </div>
@@ -71,15 +71,15 @@ const Login: React.FC = () => {
             <input
               type="password"
               placeholder='Mot de passe'
-              value={mot}
-              onChange={(e) => setMot(e.target.value)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
           <div style={{fontSize:'12px',color:'#970404'}}>{isError}</div>
           
           <button type="submit" className={isDisabled ? 'not-allowed' : 'allowed'}>
-            {isLoading ? 'Connexion' : 'Se connecter'}
+            {isLoading ? 'Connexion...' : 'Se connecter'}
           </button>
         </form>
       </div>

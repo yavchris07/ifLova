@@ -4,7 +4,7 @@ import { baseUrl } from "../types/base-url";
 
 
 export default function useFetchData(){
-    const [arti,setDeposit] = React.useState<Article[]>([]);
+    const [art,setDeposit] = React.useState<Article[]>([]);
     const [isLoading,setIsloading] = React.useState(false);
     const [error,setError] = React.useState<string>('');
 
@@ -12,7 +12,7 @@ export default function useFetchData(){
         const handleFetchDeposits = async () => {
             setIsloading(true);
             try{
-                const reponse = await fetch(`${baseUrl}/articles`);
+                const reponse = await fetch(`${baseUrl}`);
                 const data = await reponse.json()
                 setDeposit(data);
                 console.log(data)
@@ -24,5 +24,5 @@ export default function useFetchData(){
         };
         handleFetchDeposits();
     },[]);
-    return {arti,isLoading,error};
+    return {art,isLoading,error};
 }
