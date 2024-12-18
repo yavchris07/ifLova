@@ -18,8 +18,6 @@ export default function Article() {
     article = art.find(a => a.id === parseInt(i));
   }
 
-// message :   This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.ts(2367)
-
 
   if (!article) {
     return <div className='not-found'>Chargement en cours, veuillez patienter !</div>

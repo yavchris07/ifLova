@@ -2,7 +2,7 @@
 import { Article } from '../types/article';
 import author from '../assets/main-cover.jpg';
 import { useNavigate } from 'react-router-dom';
-import art from '../types/items';
+// import art from '../types/items';
 import { encryptId } from '../hooks/decrypt';
 // import art from '../types/items';
 
