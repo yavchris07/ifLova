@@ -1,20 +1,20 @@
 import React from "react";
-import { Article } from "../types/article";
+import { News } from "../types/article";
 import { baseUrl } from "../types/base-url";
 
 
-export default function useFetchData(){
-    const [art,setDeposit] = React.useState<Article[]>([]);
-    const [isLoading,setIsloading] = React.useState(false);
+export default function useFetchMails(){
+    const [mail,setMails] = React.useState<News[]>([]);
+    const [Loading,setIsloading] = React.useState(false);
     const [error,setError] = React.useState<string>('');
 
     React.useEffect(()=>{
-        const handleFetchDeposits = async () => {
+        const handleFetchMails = async () => {
             setIsloading(true);
             try{
-                const reponse = await fetch(`${baseUrl}`);
+                const reponse = await fetch(`${baseUrl}/All-New/`);
                 const data = await reponse.json()
-                setDeposit(data);
+                setMails(data);
                 // console.log(data)
             }catch{
                 setError('Erreur l\'hors de fetching de données au serveur.')
@@ -22,7 +22,7 @@ export default function useFetchData(){
                 setIsloading(false)
             }
         };
-        handleFetchDeposits();
+        handleFetchMails();
     },[]);
-    return {art,isLoading,error};
+    return {mail,Loading,error};
 }

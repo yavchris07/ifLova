@@ -4,21 +4,23 @@ import '../styles/main.scss';
 import AdminNav from '../components/admin-nav';
 import useFetchData from '../hooks/use-fetch-articles';
 import { baseUrl } from '../types/base-url';
-import art from '../types/items';
+import useFetchMails from '../hooks/use-fetch-mails';
+// import art from '../types/items';
 
 export default function Main() {
   const [titre, setTitre] = useState<string>('');
-  const [resumes, setResumes] = useState<string>('');
-  const [dats, setDats] = useState<string>('');
+  const [resumer, setResumes] = useState<string>('');
+  const [date_article, setDats] = useState<string>('');
   const [type, setType] = useState<string>('');
   const [image, setImage] = useState<File | null>(null);
-  const [author, setAuthor] = useState<string>('');
+  const [auteur, setAuthor] = useState<string>('');
 
   const navigator = useNavigate();
   const [loading, setLoading] = useState<boolean>(false);
   const [isError, setError] = useState<string>('');
 
   const { art, isLoading } = useFetchData();
+  const {error,Loading, mail} = useFetchMails()
 
   // Contrôle si l'utilisateur est connecté
   useEffect(() => {
@@ -49,11 +51,11 @@ export default function Main() {
 
     // Ajout des données au formulaire
     formData.append('titre', titre);
-    formData.append('resumes', resumes);
-    formData.append('dats', dats);
+    formData.append('resumer', resumer);
+    formData.append('date_article', date_article);
     formData.append('type', type);
     formData.append('image', image); // Ajout de l'image
-    formData.append('author', author);
+    formData.append('auteur', auteur);
 
     // Debug des données dans FormData
     formData.forEach((value, key) => {
@@ -61,7 +63,7 @@ export default function Main() {
     });
 
     try {
-      const response = await fetch(`${baseUrl}/articles`, {
+      const response = await fetch(`${baseUrl}/Insert-Article/`, {
         method: 'POST',
         body: formData,
       });
@@ -73,7 +75,7 @@ export default function Main() {
       }
 
       const data = await response.json();
-      if (data.status === 'Article created') {
+      if (data) {
         alert('Article créé avec succès !');
         setTitre('');
         setResumes('');
@@ -125,7 +127,7 @@ export default function Main() {
               <input
                 type="text"
                 id="resumes"
-                value={resumes}
+                value={resumer}
                 placeholder="Le résumé ..."
                 onChange={(e) => setResumes(e.target.value)}
                 className='summary'
@@ -137,8 +139,8 @@ export default function Main() {
               <input
                 type="date"
                 id="dats"
-                value={dats}
-                placeholder="Date de publication ..."
+                value={date_article}
+                // placeholder="Date de publication ..."
                 onChange={(e) => setDats(e.target.value)}
               />
             </div>
@@ -159,7 +161,7 @@ export default function Main() {
               <input
                 type="text"
                 id="author"
-                value={author}
+                value={auteur}
                 placeholder="Auteur ..."
                 onChange={(e) => setAuthor(e.target.value)}
               />
@@ -180,17 +182,19 @@ export default function Main() {
           {art && art.map((a) => (
             <div className='artic'>
               <p key={a.id}>
-                {a.title}
+                {a.titre}
               </p>
-              <span>Auteur : {a.author}</span>
+              <span>Auteur : {a.auteur}</span>
             </div>
           ))}
           {/* {art.length} */}
         </div>
         <div className="list-articles">
-        <h3>Mes articles</h3>
-          {}
-          <p>dfjkdsfjdskfjkdsjfkjds</p> 
+        <h3>Mes abonnees news-letters</h3>
+          <p>Nombre d'abonnes : {mail.length}</p>
+          {mail.map((m)=>{return <p>{m.email}</p>})}
+          {Loading && <p>Chargement en cours ...</p>}
+          {error && <p>Acces impossible au serveur !</p>}
         </div>
       </div>
     </div>

@@ -1,30 +1,30 @@
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
-import { navs } from '../types/nav'
+// import { NavLink, useNavigate } from 'react-router-dom'
+// import { navs } from '../types/nav'
 
 const AdminNav = () => {
 
-    const activeLink = {
-        color: '#f9f9f9',
-        textDecoration: 'none',
-        borderBottom: '3px solid white',
-        marginBottom: '10px'
-    };
-      
-    const normal = {
-        color: '#f9f9f9',
-        textDecoration: 'none',
-        borderBottom: 'none'
-    };
+  // const activeLink = {
+  //   color: '#f9f9f9',
+  //   textDecoration: 'none',
+  //   borderBottom: '3px solid white',
+  //   marginBottom: '10px'
+  // };
 
-    const user = localStorage.getItem('email')
+  // const normal = {
+  //   color: '#f9f9f9',
+  //   textDecoration: 'none',
+  //   borderBottom: 'none'
+  // };
+
+  const user = localStorage.getItem('user')
 
   return (
     <>
       <div className='head'>
         <h3>IF LOVA OFFICIEL</h3>
         <div className='user'><h3>Admin : </h3><span>{user}</span></div>
-        
+
       </div>
 
       {/* <div className='tabs'> 

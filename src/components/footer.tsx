@@ -11,7 +11,7 @@ export default function Footer() {
 
     try {
       setIsLoading(true)
-      const response = await fetch(`${baseUrl}/letters`, {
+      const response = await fetch(`${baseUrl}/Insert-New/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
@@ -22,8 +22,6 @@ export default function Footer() {
       const data = await response.json();
 
       if (data) {
-        // navigator('/');
-        // alert('Adresse mail reussie avec succes !')
         setMail('')
       }
 

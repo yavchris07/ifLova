@@ -1,3 +1,4 @@
+import Footer from '../components/footer'
 import LitleBanner from '../components/litle-banner'
 import NavBar from '../components/nav-bar'
 import '../styles/about.scss'
@@ -33,7 +34,7 @@ export default function About() {
           Rejoignez-nous dès aujourd'hui sur YouTube, Facebook et notre site web, et découvrez tout ce que IFlova TV1 a à vous offrir.
         </p>
       </div>
-
+      <Footer />
     </>
   )
 }

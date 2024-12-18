@@ -27,7 +27,7 @@ function Home() {
         {isLoading && <div className='more'>Chargement en cours !</div>}
         {art.length === 0 && <div className='more'>Aucun article n'est présent !</div>}
         {error && <div className='more'>Erreur de la connexion vers serveur de IF Lova, Veillez patienter !</div>}
-        {art.length <= 8 &&  <div className='more'><p onClick={() => { navigator('/articles') }}>Voir plus</p></div>}
+        {art.length >= 8 &&  <div className='more'><p onClick={() => { navigator('/articles') }}>Voir plus</p></div>}
         
       </div>
       <Footer />

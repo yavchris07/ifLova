@@ -25,7 +25,7 @@ export const list = [
         element: <Articles />
     },
     {
-        path: '/article/:id',
+        path: '/article/:encryptedId',
         element: <Article />
     },
     {

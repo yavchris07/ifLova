@@ -32,8 +32,12 @@ const Login: React.FC = () => {
       if (data[0] === false) {
         setError('Erreur mauvais identifiants, email ou mot de passe !')
       }else{
-        const mail = data[1]
-        localStorage.setItem('username',mail)
+        const mail = data[2]
+        const x = data
+        // console.log(data)
+        // console.log(x.user)
+        localStorage.setItem('email',mail)
+        localStorage.setItem('user',x.user)
         navigator('/admin/main');
         // alert('Login succes !')
       }

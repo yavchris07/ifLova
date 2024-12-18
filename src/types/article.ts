@@ -1,14 +1,13 @@
 //Article
 export interface Article {
-    cover: string,
-    title: string, //55
-    date: string,
-    summary: string, //125
-    author: string,
-    typ: string,
+    image: string,
+    titre: string, //55
+    date_article: string,
+    resumer: string, //125
+    auteur: string,
+    type: string,
     id: number
 }
-
 
 //User
 export interface User {

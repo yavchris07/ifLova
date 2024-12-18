@@ -1,20 +1,25 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import art from '../types/items';
+// import art from '../types/items';
 import NavBar from '../components/nav-bar';
 import Footer from '../components/footer';
 import author from '../assets/main-cover.jpg';
+import useFetchData from '../hooks/use-fetch-articles';
+import { decryptId } from '../hooks/decrypt';
 
 export default function Article() {
-  const { id } = useParams<{ id: string }>();
-  // const { encryptedId } = useParams<{ encryptedId: string }>();
-  // const {arti} = useFetchData()
+  // const { id } = useParams<{ id: string }>();
+  const { encryptedId } = useParams<{ encryptedId: string }>();
+  const {art} = useFetchData()
   let article;
 
-  if (id) {
-    // const id = decryptId(encryptedId);
-    article = art.find(a => a.id === parseInt(id));
+  if (encryptedId) {
+    const i = decryptId(encryptedId);
+    article = art.find(a => a.id === parseInt(i));
   }
+
+// message :   This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.ts(2367)
+
 
   if (!article) {
     return <div className='not-found'>Chargement en cours, veuillez patienter !</div>
@@ -23,25 +28,22 @@ export default function Article() {
     <>
       <NavBar />
       <div className='single-article'>
-        {/* <p>{article.summary}</p>
-        <p>{article.title}</p>
-        {article.cover && <img src={article.cover} alt={article.title} />} */}
        
         <div>
-        <h3>{article.title.toUpperCase()}</h3>
+        <h3>{article.titre.toUpperCase()}</h3>
         </div>
         <div className='picture'>
-          <span>{article.typ}</span>
-          <img src={article.cover} alt={article.title} />
+          <span>{article.type}</span>
+          <img src={article.image} alt={article.image} />
         </div>
-        <div>{article.summary}</div>
+        <div>{article.resumer}</div>
 
         <div className='context'>
           <div className="avatar">
             <img src={author} alt={author}/>
-            <span>{article.author}</span>
+            <span>{article.auteur}</span>
           </div>
-          <div className="date-of-post">Le {article.date}</div>
+          <div className="date-of-post">Le {article.date_article}</div>
         </div>
 
       </div>
@@ -50,3 +52,4 @@ export default function Article() {
 
   )
 }
+
